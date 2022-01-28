@@ -1,0 +1,36 @@
+[global_config]
+  window_state = hidden
+  borderless = True
+  extra_styling = False
+  tab_position = hidden
+  broadcast_default = off
+  hide_from_taskbar = True
+  title_hide_sizetext = True
+  title_transmit_fg_color = "#000000"
+  title_transmit_bg_color = "#000000"
+  title_receive_fg_color = "#000000"
+  title_receive_bg_color = "#000000"
+  title_inactive_bg_color = "#000000"
+[keybindings]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    show_titlebar = False
+  [[tc]]
+    audible_bell = True
+    visible_bell = True
+    cursor_color = "#aaaaaa"
+    font = Classic Console Neue 25
+    foreground_color = "#f6f5f4"
+    show_titlebar = False
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
