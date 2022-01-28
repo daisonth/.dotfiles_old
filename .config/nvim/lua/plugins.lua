@@ -2,7 +2,7 @@ return require('packer').startup({function()
 
   use 'wbthomason/packer.nvim'
 
-  use 'eddyekofo94/gruvbox-flat.nvim'
+--  use 'eddyekofo94/gruvbox-flat.nvim'
   use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons',}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use 'lukas-reineke/indent-blankline.nvim'

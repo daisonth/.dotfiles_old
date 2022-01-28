@@ -29,7 +29,7 @@ case $step in
     mount --rbind /dev /mnt/dev && mount --make-rslave /mnt/dev
     mount --rbind /proc /mnt/proc && mount --make-rslave /mnt/proc
     cp /etc/resolv.conf /mnt/etc
-    cp /scripts/void-build.sh /mnt/
+    cp /media/void-build.sh /mnt/
     echo -ne "\n\n\nCHROOT INTO NEW SYSTEM\n"
     PS1='(chroot) # ' chroot /mnt/ /bin/bash
     ;;
@@ -60,9 +60,6 @@ case $step in
     echo -ne "\n Select the drive to install grub (eg: sdc) : "
     read x
     grub-install --target=i386-pc --boot-directory /boot --removable /dev/$x
-    echo -ne "\n\n\nSTARTING sshd and dhcpcd services\n"
-    ln -s /etc/sv/sshd /var/service
-    ln -s /etc/sv/dhcpcd /var/service
     echo -ne "\n\n\nADD USER\n"
     useradd -m -s /bin/bash -U -G wheel,users,audio,video,input daisn
     passwd daisn
@@ -72,6 +69,9 @@ case $step in
 
   3)
     clear
+    echo -ne "\n\n\nSTARTING sshd and dhcpcd services\n"
+    ln -s /etc/sv/sshd /var/service
+    ln -s /etc/sv/dhcpcd /var/service
     echo -ne "\n\n\nCLONING dotfiles & INSTALLING PACKAGES\n"
     cd
     git clone https://github.com/daisonth/.dotfiles.git
@@ -79,7 +79,6 @@ case $step in
     mkdir ~/.config
     cd .dotfiles/
     stow . 
-    feh --bg-scale /home/daisn/wallpaper/voidwall.png
     echo -ne "\n\n\nINSTALLING DWM...\n"
     cd /home/daisn/.dotfiles/dwm
     sudo make install
@@ -94,7 +93,7 @@ case $step in
     sudo make install
     echo -ne "\n\n\nINSTALLING FONTS...\n"
     sudo mkdir /usr/share/fonts
-    sudo cp ~/.dotfiles/classic_console_neue.zip /.dotfiles/Agave.zip ~/git/dotfiles/JetBrainsMono.zip /usr/share/fonts/
+    sudo cp ~/.dotfiles/classic_console_neue.zip ~/.dotfiles/Agave.zip ~/.dotfiles/JetBrainsMono.zip /usr/share/fonts/
     cd /usr/share/fonts/
     sudo unzip Agave.zip
     sudo unzip JetBrainsMono.zip
