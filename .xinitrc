@@ -51,9 +51,10 @@ fi
 
 
 
-picom -b &
+
 dunst &
 ~/.fehbg &
 slstatus &
+xcompmgr -c &
 exec dwm
 #exec herbstluftwm --locked

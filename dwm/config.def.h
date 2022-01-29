@@ -151,13 +151,13 @@ static Key keys[] = {
   { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
   { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
   { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-  { MODKEY,                       XK_F3,     spawn,          SHCMD("bash ~/git/scripts/inc_vol.sh")},
-  { MODKEY,                       XK_F2,     spawn,          SHCMD("bash ~/git/scripts/dec_vol.sh")},
-  { MODKEY,                       XK_F4,     spawn,          SHCMD("bash ~/git/scripts/mute.sh")},
-  { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("bash ~/git/scripts/themenu.sh")},
-  { MODKEY|ShiftMask,             XK_y,      spawn,          SHCMD("bash ~/git/scripts/yt.sh")},
-  { MODKEY,			              XK_F5,     spawn,          SHCMD("bash ~/git/scripts/mpv.sh")},
-  { MODKEY,			              XK_F1,     spawn,          SHCMD("bash ~/git/scripts/time-date.sh")},
+  { MODKEY,                       XK_F3,     spawn,          SHCMD("bash ~/.dotfiles/scripts/inc_vol.sh")},
+  { MODKEY,                       XK_F2,     spawn,          SHCMD("bash ~/.dotfiles/scripts/dec_vol.sh")},
+  { MODKEY,                       XK_F4,     spawn,          SHCMD("bash ~/.dotfiles/scripts/mute.sh")},
+  { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("bash ~/.dotfiles/scripts/themenu.sh")},
+  { MODKEY|ShiftMask,             XK_y,      spawn,          SHCMD("bash ~/.dotfiles/scripts/yt.sh")},
+  { MODKEY,			              XK_F5,     spawn,          SHCMD("bash ~/.dotfiles/scripts/mpv.sh")},
+  { MODKEY,			              XK_F1,     spawn,          SHCMD("bash ~/.dotfiles/scripts/time-date.sh")},
   TAGKEYS(                        XK_1,                      0)
   TAGKEYS(                        XK_2,                      1)
   TAGKEYS(                        XK_3,                      2)

@@ -35,7 +35,7 @@ catppuccin.setup {
     gitsigns = true,
     telescope = true,
     nvimtree = {
-      enabled = true,
+      enabled = false,
       show_root = false,
     },
     which_key = false,
