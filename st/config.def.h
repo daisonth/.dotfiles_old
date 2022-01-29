@@ -6,7 +6,6 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Agave Nerd Font:pixelsize=17:antialias=true:autohint=true";
-//static char *font = "VideoTerminalScreen Normal Bold:pixelsize=17:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -20,7 +19,7 @@ static int borderpx = 2;
 static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
-char *scroll = NULL;
+char *scroll = "scroll";
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -74,11 +73,11 @@ static unsigned int cursorthickness = 2;
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
  * 0: disable (render all U25XX glyphs normally from the font).
  */
-const int boxdraw = 1;
+const int boxdraw = 0;
 const int boxdraw_bold = 0;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 1;
+const int boxdraw_braille = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -106,36 +105,54 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/* bg opacity */
+float alpha = 0.8, alphaUnfocused = 0.4;
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+	/* 8 normal colors */
 
-  /* 8 normal colors */
-  [0] = "#1e1d2d",
-  [1] = "#ea6962",
-  [2] = "#a9b665",
-  [3] = "#d8a657",
-  [4] = "#7daea3",
-  [5] = "#d3869b",
-  [6] = "#89b482",
-  [7] = "#d4be98",
+	[0] = "#323437",
+	[1] = "#ff5454",
+	[2] = "#8cc85f",
+	[3] = "#e3c78a",
+	[4] = "#80a0ff",
+	[5] = "#d183e8",
+	[6] = "#79dac8",
+	[7] = "#a1aab8",
 
-  [8]  = "#928374",
-  [9]  = "#ef938e",
-  [10] = "#bbc585",
-  [11] = "#e1bb7e",
-  [12] = "#9dc2ba",
-  [13] = "#e1acbb",
-  [14] = "#a7c7a2",
-  [15] = "#dadae8",
+	/* 8 bright colors */
+
+    [8] = "#7c8f8f",
+	[9] = "#ff5189",
+	[10] = "#36c692",
+	[11] = "#bfbf97",
+	[12] = "#74b2ff",
+	[13] = "#ae81ff",
+	[14] = "#85dc85",
+	[15] = "#e2637f",
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+  [256] = "#282a36", 
+  [257] = "#f8f8f2",
+  [258] = "#080808",
+  [259]= "#eeeeee",
+//	"gray90", /* default foreground colour */
+//	"black", /* default background colour */
 };
+
+
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 15;
+unsigned int defaultbg = 258;
+unsigned int defaultfg = 259;
+unsigned int defaultcs = 1;
 static unsigned int defaultrcs = 257;
+unsigned int bg = 258, bgUnfocused = 16;
 
 /*
  * Default shape of cursor
@@ -144,7 +161,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
@@ -157,8 +174,8 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
-static unsigned int mousebg = 0;
+static unsigned int mousefg = 1;
+static unsigned int mousebg = 1;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
@@ -177,11 +194,8 @@ static uint forcemousemod = ShiftMask;
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
-const unsigned int mousescrollincrement = 4;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ ShiftMask,            Button4, kscrollup,      {.i =  mousescrollincrement} }, 
-	{ ShiftMask,            Button5, kscrolldown,    {.i =  mousescrollincrement} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
@@ -207,8 +221,6 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
