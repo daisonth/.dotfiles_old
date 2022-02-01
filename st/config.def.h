@@ -106,39 +106,40 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8, alphaUnfocused = 0.4;
+float alpha = 0.9, alphaUnfocused = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
 
-	[0] = "#323437",
-	[1] = "#ff5454",
-	[2] = "#8cc85f",
-	[3] = "#e3c78a",
-	[4] = "#80a0ff",
-	[5] = "#d183e8",
-	[6] = "#79dac8",
-	[7] = "#a1aab8",
+	[0] = "#6E6C7E",
+	[1] = "#F28FAD",
+	[2] = "#ABE9B3",
+	[3] = "#FAE3B0",
+	[4] = "#96CDFB",
+	[5] = "#F5C2E7",
+	[6] = "#89DCEB",
+	[7] = "#D9E0EE",
 
 	/* 8 bright colors */
 
-    [8] = "#7c8f8f",
-	[9] = "#ff5189",
-	[10] = "#36c692",
-	[11] = "#bfbf97",
-	[12] = "#74b2ff",
-	[13] = "#ae81ff",
-	[14] = "#85dc85",
-	[15] = "#e2637f",
+    [ 8] = "#988BA2",
+	[ 9] = "#F28FAD",
+	[10] = "#ABE9B3",
+	[11] = "#FAE3B0",
+	[12] = "#96CDFB",
+	[13] = "#F5C2E7",
+	[14] = "#89DCEB",
+	[15] = "#D9E0EE",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
+  [260] = "#ff5454",
   [256] = "#282a36", 
   [257] = "#f8f8f2",
-  [258] = "#080808",
-  [259]= "#eeeeee",
+  [258] = "#000000",
+  [259]= "#D9E0EE",
 //	"gray90", /* default foreground colour */
 //	"black", /* default background colour */
 };
@@ -150,7 +151,7 @@ static const char *colorname[] = {
  */
 unsigned int defaultbg = 258;
 unsigned int defaultfg = 259;
-unsigned int defaultcs = 1;
+unsigned int defaultcs = 260;
 static unsigned int defaultrcs = 257;
 unsigned int bg = 258, bgUnfocused = 16;
 
@@ -174,8 +175,8 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 1;
-static unsigned int mousebg = 1;
+static unsigned int mousefg = 260;
+static unsigned int mousebg = 260;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which

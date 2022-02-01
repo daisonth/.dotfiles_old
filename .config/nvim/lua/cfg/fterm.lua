@@ -4,7 +4,7 @@ require'FTerm'.setup({
         height = 0.9,
         width = 0.9,
     },
-    blend = 10
+    blend = 13
 })
 
 nmap('<F1>',":lua require('FTerm').toggle()<CR>")

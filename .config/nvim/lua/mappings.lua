@@ -54,3 +54,13 @@ nmap(';', ':')
 -- open terminal
 nmap('TT',':vs<CR>:set nornu<CR>:set nonu<CR>:te<CR>i')
 nmap('bx',':bd<CR>')
+
+-- auto close paranthesis
+imap('{', '{}<Left>')
+imap('{<Space>', '<Esc>o{}<Left><CR><TAB><CR><Up><Right><Right>')
+
+imap('(', '()<Left>')
+imap('<', '<><Left>')
+imap('\'', '\'\'<Left>')
+imap('"', '""<Left>')
+imap('[', '[]<Left>')
