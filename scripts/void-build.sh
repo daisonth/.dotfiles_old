@@ -55,14 +55,14 @@ case $step in
     cat /etc/fstab
     echo -ne "\n\n\nSET ROOT PASSWORD :\n "
     passwd
+    echo -ne "\n\n\nADD USER\n"
+    useradd -m -s /bin/bash -U -G wheel,users,audio,video,input daisn
+    passwd daisn
     echo -ne "\n\n\nINSTALLING GRUB\n"
     lsblk
     echo -ne "\n Select the drive to install grub (eg: sdc) : "
     read x
     grub-install --target=i386-pc --boot-directory /boot --removable /dev/$x
-    echo -ne "\n\n\nADD USER\n"
-    useradd -m -s /bin/bash -U -G wheel,users,audio,video,input daisn
-    passwd daisn
     xbps-reconfigure -fa
     echo -ne "\n\n\n\nINSTALLATION COMPLETE, REBOOT NOW and login as DAISN\n"
     ;;
@@ -72,6 +72,7 @@ case $step in
     echo -ne "\n\n\nSTARTING sshd and dhcpcd services\n"
     ln -s /etc/sv/sshd /var/service
     ln -s /etc/sv/dhcpcd /var/service
+    ping voidlinux.org
     echo -ne "\n\n\nCLONING dotfiles & INSTALLING PACKAGES\n"
     cd
     git clone https://github.com/daisonth/.dotfiles.git
@@ -99,7 +100,7 @@ case $step in
     sudo unzip JetBrainsMono.zip
     sudo unzip classic_console_neue.zip
     fc-cache -f -v
-    sudo rm Agave.zip JetBrainsMono.zip classic_console_neue.zip
+    sudo rm -R Agave.zip JetBrainsMono.zip classic_console_neue.zip
     sh -c "$(curl -fsSL https://starship.rs/install.sh)"
     echo -ne "\n\n\n\nINSTALATION SUCCESSFUL :)\n"
     sudo rm /void-build.sh
