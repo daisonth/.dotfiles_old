@@ -38,6 +38,11 @@ elif [ $p == ".dunstrc" ];then
   notify-send "Edit dunstrc" -t 5000
   st -e nvim dunstrc
 
+elif [ $p == ".xinitrc" ];then
+  cd $HOME/.dotfiles/
+  notify-send "Edit .xinitrc" -t 5000
+  st -e nvim .xinitrc
+
 elif [ $p == ".bashrc" ];then
   cd $HOME/.dotfiles/
   notify-send "Edit .bashrc" -t 5000

@@ -158,7 +158,7 @@ hc attr theme.active.outer_width 1
 hc attr theme.background_color '#141414'
 
 hc set window_gap 0
-hc set frame_padding 10
+hc set frame_padding 3
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0

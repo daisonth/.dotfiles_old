@@ -19,7 +19,7 @@ set zoom-min 10
 # zathurarc-dark
 
 set font "JetBrainsMono Nerd Font 10"
-set default-bg "#1D2021" #00
+set default-bg rgba(0,0,0,0.7) #00
 set default-fg "#F7F7F6" #01
 
 set statusbar-fg "#B0B0B0" #04
@@ -47,7 +47,7 @@ set notification-bg "#90A959" #0B
 set notification-fg "#151515" #00
 
 set recolor "true"
-set recolor-lightcolor "#1D2021" #00
+set recolor-lightcolor rgba(0,0,0,0) #00
 set recolor-darkcolor "#EDEADE" #06
 set recolor-reverse-video "true"
 set recolor-keephue "true"
