@@ -61,12 +61,12 @@ cmp.setup {
   },
 
   sources = {
-    { name = "nvim_diagnostic" },
-    { name = "luasnip" },
-    { name = "buffer" },
-    { name = "nvim_lua" },
-    { name = "path" },
-    { name = "orgmode" },
+  { name = "nvim_diagnostic" },
+  { name = "luasnip" },
+  { name = "buffer" },
+  { name = "nvim_lua" },
+  { name = "path" },
+  { name = "orgmode" },
   },
 
   formatting = {

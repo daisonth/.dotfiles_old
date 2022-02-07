@@ -29,7 +29,7 @@ case $step in
     mount --rbind /dev /mnt/dev && mount --make-rslave /mnt/dev
     mount --rbind /proc /mnt/proc && mount --make-rslave /mnt/proc
     cp /etc/resolv.conf /mnt/etc
-    cp /media/void-build.sh /mnt/
+    cp /void-build.sh /mnt/
     echo -ne "\n\n\nCHROOT INTO NEW SYSTEM\n"
     PS1='(chroot) # ' chroot /mnt/ /bin/bash
     ;;
@@ -70,8 +70,8 @@ case $step in
   3)
     clear
     echo -ne "\n\n\nSTARTING sshd and dhcpcd services\n"
-    ln -s /etc/sv/sshd /var/service
-    ln -s /etc/sv/dhcpcd /var/service
+    sudo ln -s /etc/sv/sshd /var/service
+    sudo ln -s /etc/sv/dhcpcd /var/service
     ping voidlinux.org
     echo -ne "\n\n\nCLONING dotfiles & INSTALLING PACKAGES\n"
     cd
@@ -80,17 +80,14 @@ case $step in
     mkdir ~/.config
     cd .dotfiles/
     stow . 
-    echo -ne "\n\n\nINSTALLING DWM...\n"
-    cd /home/daisn/.dotfiles/dwm
-    sudo make install
     echo -ne "\n\n\nINSTALLING DMENU...\n"
     cd /home/daisn/.dotfiles/dmenu
     sudo make install
     echo -ne "\n\n\nINSTALLING ST...\n"
     cd /home/daisn/.dotfiles/st
     sudo make install
-    echo -ne "\n\n\nINSTALLING SLSTATUS...\n"
-    cd /home/daisn/.dotfiles/slstatus
+    echo -ne "\n\n\nINSTALLING SCROLL...\n"
+    cd /home/daisn/.dotfiles/scroll/
     sudo make install
     echo -ne "\n\n\nINSTALLING FONTS...\n"
     sudo mkdir /usr/share/fonts

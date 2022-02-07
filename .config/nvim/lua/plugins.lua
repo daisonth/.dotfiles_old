@@ -2,14 +2,11 @@ return require('packer').startup({function()
 
   use 'wbthomason/packer.nvim'
 
---  use 'eddyekofo94/gruvbox-flat.nvim'
   use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons',}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use 'lukas-reineke/indent-blankline.nvim'
---  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use "numToStr/FTerm.nvim"
   use "norcalli/nvim-colorizer.lua"
---  use 'nvim-neorg/neorg'
   use({'catppuccin/nvim', as = 'catppuccin'})
 
   use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
@@ -28,6 +25,8 @@ return require('packer').startup({function()
 
   use 'rafamadriz/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
+
+  use 'vimwiki/vimwiki'
 
 end,
 
