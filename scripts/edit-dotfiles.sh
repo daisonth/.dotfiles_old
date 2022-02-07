@@ -1,6 +1,6 @@
 #!/bin/bash
 
-str=$'Herbstluftwm\nnvim\ndmenu\nst\nranger\nzathurarc\n.stow-local-ignore\n.dunstrc\n.xinitrc\n.bashrc\n.fehbg\nscripts'
+str=$'Herbstluftwm\nnvim\ndmenu\nst\nranger\nzathurarc\n.stow-local-ignore\n.dunstrc\n.xinitrc\n.bashrc\n.fehbg\nscripts\nqutebrowser'
 read p <<< $(echo "$str"|dmenu)
 
 if [ $p == "Herbstluftwm" ];then
@@ -57,6 +57,11 @@ elif [ $p == ".stow-local-ignore" ];then
   cd $HOME/.dotfiles/
   notify-send "Edit .stow-local-ignore" -t 5000
   st -e nvim .stow-local-ignore
+  
+elif [ $p == "qutebrowser" ];then
+  cd $HOME/.dotfiles/.config/qutebrowser/
+  notify-send "Edit qutebrowser config file" -t 5000
+  st -e nvim config.py
 
 elif [ $p == "scripts" ];then
   cd $HOME/.dotfiles/scripts/

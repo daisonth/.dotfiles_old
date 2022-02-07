@@ -22,7 +22,7 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q close
 hc keybind $Mod-Return spawn st # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-g spawn firefox
+hc keybind $Mod-g spawn qutebrowser
 hc keybind $Mod-m spawn st -e mocp
 hc keybind $Mod-d spawn dmenu_run
 hc keybind $Mod-F1 spawn bash ~/.dotfiles/scripts/time-date.sh
