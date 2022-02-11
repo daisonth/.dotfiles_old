@@ -31,6 +31,9 @@ hc keybind $Mod-F3 spawn bash ~/.dotfiles/scripts/inc_vol.sh
 hc keybind $Mod-F4 spawn bash ~/.dotfiles/scripts/mute.sh
 hc keybind $Mod-t spawn bash ~/.config/herbstluftwm/q3terminal.sh
 hc keybind $Mod-e spawn bash ~/.dotfiles/scripts/edit-dotfiles.sh
+hc keybind $Mod-y spawn bash ~/.dotfiles/scripts/yt.sh
+hc keybind $Mod-Print spawn scrot /home/daisn/screenshot/x.png
+hc keybind $Mod-Shift-Print spawn scrot -s /home/daisn/screenshot/x.png
 
 # basic movement in tiling and floating mode
 # focusing clients
