@@ -38,7 +38,9 @@ case $step in
     clear
     echo -ne "\n\n\nCONFIGURATION\n"
     echo void > /etc/hostname
-    sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/default/libc-locales
+    grep -v "#en_US.UTF-8 UTF-8" /etc/default/libc-locales > file2
+    mv file2 /etc/default/libc-locales  
+    sed -i '/#en_US i en_US.UTF-8 UTF-8' /etc/default/libc-locales 
     ln -sf /usr/share/zoneinfo/Asia/Kolkat /etc/localtime
     hwclock --systohc
     echo -ne "\nGENERATING LOCALE FILES \n"
@@ -62,14 +64,14 @@ case $step in
     read x
     grub-install --target=i386-pc --boot-directory /boot --removable /dev/$x
     xbps-reconfigure -fa
-    sudo ln -s /etc/sv/sshd /var/service
-    sudo ln -s /etc/sv/dhcpcd /var/service
     echo -ne "\n\n\n\nINSTALLATION COMPLETE, REBOOT NOW and login as DAISN\n"
     ;;
 
   3)
     clear
     echo -ne "\n\n\nSTARTING sshd and dhcpcd services\n"
+    sudo ln -s /etc/sv/sshd /var/service
+    sudo ln -s /etc/sv/dhcpcd /var/service
     ping voidlinux.org
     echo -ne "\n\n\nCLONING dotfiles & INSTALLING PACKAGES\n"
     cd
