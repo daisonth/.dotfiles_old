@@ -42,7 +42,6 @@ harfbuzz-devel
 noto-fonts-emoji
 noto-fonts-ttf
 feh
-nix
 clang
 stow
 ImageMagick
@@ -53,3 +52,4 @@ xcompmgr
 qutebrowser
 figlet
 unoconv
+xrdb

@@ -19,7 +19,7 @@ alias hc='herbstclient'
 alias remove='sudo xbps-remove'
 alias n='NNN_FIFO=/home/daisn/.config/nnn/nnn.fifo nnn'
 alias v='nvim'
-export NNN_PLUG='v:imgview;p:preview-tui'
+export NNN_PLUG='v:imgview;p:preview-tui;k:kdeconnect'
 
 PS1='[\u@\h \W]\$ '
 

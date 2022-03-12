@@ -24,15 +24,19 @@ hc keybind $Mod-q close
 hc keybind $Mod-Return spawn st # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-g spawn qutebrowser
 hc keybind $Mod-m spawn st -e mocp
+hc keybind $Mod-v spawn st -e nvim
+hc keybind $Mod-n spawn st -e nnn
 hc keybind $Mod-d spawn dmenu_run
+hc keybind $Mod-x spawn xkill
 hc keybind $Mod-F1 spawn bash ~/.dotfiles/scripts/time-date.sh
 hc keybind $Mod-F2 spawn bash ~/.dotfiles/scripts/dec_vol.sh
 hc keybind $Mod-F3 spawn bash ~/.dotfiles/scripts/inc_vol.sh
 hc keybind $Mod-F4 spawn bash ~/.dotfiles/scripts/mute.sh
+hc keybind $Mod-F9 spawn bash ~/.dotfiles/scripts/kdecon.sh
 hc keybind $Mod-t spawn bash ~/.config/herbstluftwm/q3terminal.sh
 hc keybind $Mod-e spawn bash ~/.dotfiles/scripts/edit-dotfiles.sh
 hc keybind $Mod-y spawn bash ~/.dotfiles/scripts/yt.sh
-hc keybind $Mod-Print spawn scrot /home/daisn/screenshot/x.png
+hc keybind $Mod-Print spawn scrot ~/screenshot/x.png
 hc keybind $Mod-Shift-Print spawn scrot -s /home/daisn/screenshot/x.png
 
 # basic movement in tiling and floating mode

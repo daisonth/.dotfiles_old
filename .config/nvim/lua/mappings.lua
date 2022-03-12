@@ -61,6 +61,11 @@ imap('{<Space>', '<Esc>o{}<Left><CR><TAB><CR><Up><Right><Right>')
 
 imap('(', '()<Left>')
 imap('<', '<><Left>')
+imap('<<', '<<')
 imap('\'', '\'\'<Left>')
 imap('"', '""<Left>')
 imap('[', '[]<Left>')
+
+-- New line in noremal mode
+nmap('<C-o>','O<Esc>')
+nmap('<NL>','i<CR><ESC>')
