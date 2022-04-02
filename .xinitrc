@@ -54,6 +54,7 @@ fi
 xcompmgr &
 dunst &
 ~/.fehbg &
+conky &
 slstatus &
 #exec dwm
 exec herbstluftwm --locked

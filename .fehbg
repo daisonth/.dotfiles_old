@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/daisn/wallpaper/gavinok/sylvain-sarrailh-bridgehdartstation.jpg'
+feh --no-fehbg --bg-tile '/home/daisn/wallpaper/grid.png'

@@ -28,12 +28,13 @@ hc keybind $Mod-v spawn st -e nvim
 hc keybind $Mod-n spawn st -e nnn
 hc keybind $Mod-d spawn dmenu_run
 hc keybind $Mod-x spawn xkill
+hc keybind F2 spawn bash ~/.config/herbstluftwm/q3terminal.sh
 hc keybind $Mod-F1 spawn bash ~/.dotfiles/scripts/time-date.sh
 hc keybind $Mod-F2 spawn bash ~/.dotfiles/scripts/dec_vol.sh
 hc keybind $Mod-F3 spawn bash ~/.dotfiles/scripts/inc_vol.sh
 hc keybind $Mod-F4 spawn bash ~/.dotfiles/scripts/mute.sh
 hc keybind $Mod-F9 spawn bash ~/.dotfiles/scripts/kdecon.sh
-hc keybind $Mod-t spawn bash ~/.config/herbstluftwm/q3terminal.sh
+
 hc keybind $Mod-e spawn bash ~/.dotfiles/scripts/edit-dotfiles.sh
 hc keybind $Mod-y spawn bash ~/.dotfiles/scripts/yt.sh
 hc keybind $Mod-Print spawn scrot ~/screenshot/x.png
@@ -98,9 +99,9 @@ hc keybind $Mod-comma  use_index -1 --skip-visible
 
 # layouting
 hc keybind $Mod-r remove
-hc keybind $Mod-s floating toggle
+hc keybind $Mod-Shift-s floating toggle
 hc keybind $Mod-f fullscreen toggle
-hc keybind $Mod-Shift-f set_attr clients.focus.floating toggle
+hc keybind $Mod-s set_attr clients.focus.floating toggle
 hc keybind $Mod-Shift-m set_attr clients.focus.minimized true
 hc keybind $Mod-Control-m jumpto last-minimized
 hc keybind $Mod-p pseudotile toggle
@@ -108,8 +109,8 @@ hc keybind $Mod-p pseudotile toggle
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
 hc keybind $Mod-space                                                           \
-            or , and . compare tags.focus.curframe_wcount = 2                   \
-                     . cycle_layout +1 vertical horizontal max vertical grid    \
+            or , and . compare tags.focus.curframe_wcount = 1                   \
+                     . cycle_layout +1 horizontal vertical max vertical grid    \
                , cycle_layout +1
 
 # mouse
@@ -169,6 +170,13 @@ hc set frame_padding 1
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
+hc set focus_follows_mouse 1
+hc set default_frame_layout horizontal
+
+hc substitute ALGO settings.default_frame_layout \
+    foreach T tags.by-name. \
+    sprintf ATTR '%c.tiling.root.algorithm' T \
+    set_attr ATTR ALGO
 
 # rules
 hc unrule -F

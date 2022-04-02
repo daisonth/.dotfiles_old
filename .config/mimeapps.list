@@ -1,11 +1,11 @@
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
-text/plain=vim.desktop
-text/*=vim.desktop
+text/plain=nvim.desktop
+text/*=nvim.desktop
 image/png=sxiv.desktop
 image/jpg=sxiv.desktop
 image/jpeg=sxiv.desktop
-text/cpp=vim.desktop
+text/cpp=nvim.desktop
 audio/mp3=mocp.desktop
 audio/mpeg=mocp.desktop

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-str=$'Herbstluftwm\nnvim\ndmenu\nst\nranger\nzathurarc\n.stow-local-ignore\n.dunstrc\n.xinitrc\n.bashrc\n.fehbg\nscripts\nqutebrowser'
+str=$'Herbstluftwm\nnvim\ndmenu\nst\nranger\nzathurarc\n.stow-local-ignore\n.dunstrc\n.xinitrc\n.bashrc\n.fehbg\n.conkyrc\nscripts\nqutebrowser'
 read p <<< $(echo "$str"|dmenu)
 
 if [ $p == "Herbstluftwm" ];then
@@ -53,6 +53,11 @@ elif [ $p == ".fehbg" ];then
   notify-send "Edit .fehbg" -t 5000
   st -e nvim .fehbg
  
+elif [ $p == ".conkyrc" ];then
+  cd $HOME
+  notify-send "Edit .conkyrc" -t 5000
+  st -e nvim .conkyrc
+
 elif [ $p == ".stow-local-ignore" ];then
   cd $HOME/.dotfiles/
   notify-send "Edit .stow-local-ignore" -t 5000
