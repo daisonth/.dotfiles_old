@@ -9,7 +9,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.autoindent = true
 vim.opt.ignorecase = true
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.smartindent = false
 vim.opt.termguicolors = true
 vim.opt.mouse = "a"
@@ -109,7 +109,8 @@ require("cfg/packer")
 require("cfg/gruvbox_flat")
 require("cfg/bufferline")
 require("cfg/nvimtree")
-require("cfg/lspconfig")
+--require("cfg/lspconfig")
+require("cfg/test")
 require("cfg/cmp")
 require("cfg/fterm")
 require("cfg/treesitter")

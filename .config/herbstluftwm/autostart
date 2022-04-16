@@ -21,11 +21,11 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q close
-hc keybind $Mod-Return spawn st # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn alacritty # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-g spawn qutebrowser
-hc keybind $Mod-m spawn st -e mocp
-hc keybind $Mod-v spawn st -e nvim
-hc keybind $Mod-n spawn st -e nnn
+hc keybind $Mod-m spawn alacritty -e mocp
+hc keybind $Mod-v spawn alacritty -e nvim
+hc keybind $Mod-n spawn alacritty -e nnn -e
 hc keybind $Mod-d spawn dmenu_run
 hc keybind $Mod-x spawn xkill
 hc keybind F2 spawn bash ~/.config/herbstluftwm/q3terminal.sh

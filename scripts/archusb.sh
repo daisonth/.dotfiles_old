@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo -ne "\nEnter the step No : "
 read p
 

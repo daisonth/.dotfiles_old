@@ -4,8 +4,8 @@
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 
-export TERMINAL="st"
-export BROWSER="firefox"
+export TERMINAL="alacritty"
+export BROWSER="qutebrowser"
 export READER="zathura"
 export EDITOR="nvim"
 export VISUAL="nvim"
