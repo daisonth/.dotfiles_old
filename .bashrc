@@ -22,7 +22,10 @@ alias add='sudo pacman -S'
 alias remove='sudo pacman --remove --recursive'
 alias update='sudo pacman -Syyu'
 alias hc='herbstclient'
-alias n='NNN_FIFO=/home/daison/.config/nnn/nnn.fifo nnn'
+
+BLK="04" CHR="04" DIR="05" EXE="00" REG="00" HARDLINK="00" SYMLINK="06" MISSING="00" ORPHAN="01" FIFO="0F" SOCK="0F" OTHER="02"
+export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
+alias n='NNN_FIFO=/home/daison/.config/nnn/nnn.fifo nnn -e'
 export NNN_PLUG='v:imgview;p:preview-tui;k:kdeconnect;f:fixname;g:fzcd'
 
 PS1='[\u@\h \W]\$ '

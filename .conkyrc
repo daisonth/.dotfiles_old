@@ -35,9 +35,11 @@ conky.config = {
 };
 conky.text = [[
 ${time %H:%M:%S}${alignr}${time %d-%m-%y}
+
 ${voffset -16}${font sans-serif:bold:size=30}${alignc}${time %I:%M}${font}
 ${voffset 4}${alignc}${time %A %B %d, %Y}
 ${font}${voffset -4}
+
 ${font sans-serif:bold:size=10}SYSTEM ${hr 2}
 ${font sans-serif:normal:size=8}$sysname $kernel $alignr $machine
 Host:$alignr$nodename
@@ -45,10 +47,12 @@ Uptime:$alignr$uptime
 File System: $alignr${fs_type}
 Processes: $alignr ${execi 1000 ps aux | wc -l}
 
+
 ${font sans-serif:bold:size=10}CPU ${hr 2}
 ${font sans-serif:normal:size=8}${execi 1000 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//'}
 ${font sans-serif:normal:size=8}${cpugraph cpu1}
 CPU: ${cpu cpu1}% ${cpubar cpu1}
+
 
 ${font sans-serif:bold:size=10}MEMORY ${hr 2}
 ${font sans-serif:normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
@@ -56,15 +60,20 @@ $membar
 SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
 ${swapbar}
 
+
 ${font sans-serif:bold:size=10}DISK USAGE ${hr 2}
-${font sans-serif:normal:size=8}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${font sans-serif:normal:size=8}Intel SSD $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
 ${fs_bar /}
+${font sans-serif:normal:size=8}Hard Disk $alignc ${fs_used /home/daison/drive/} / ${fs_size /home/daison/drive/} $alignr ${fs_used_perc /home/daison/drive/}%
+${fs_bar /home/daison/drive/}
+
 
 ${font Ubuntu:bold:size=10}NETWORK ${hr 2}
 ${font sans-serif:normal:size=8}Local IPs:${alignr}External IP:
 ${execi 1000 ip a | grep inet | grep -vw lo | grep -v inet6 | cut -d \/ -f1 | sed 's/[^0-9\.]*//g'}  ${alignr}${execi 1000  wget -q -O- http://ipecho.net/plain; echo}
-${font sans-serif:normal:size=8}Down: ${downspeed enp3s0}  ${alignr}Up: ${upspeed enp3s0} 
-${color lightgray}${downspeedgraph enp3s0 80,130 } ${alignr}${upspeedgraph enp3s0 80,130 }$color
+${font sans-serif:normal:size=8}Down: ${downspeed enp4s0}  ${alignr}Up: ${upspeed enp4s0} 
+${color lightgray}${downspeedgraph enp4s0 80,130 } ${alignr}${upspeedgraph enp4s0 80,130 }$color
+
 ${font sans-serif:bold:size=10}TOP PROCESSES ${hr 2}
 ${font sans-serif:normal:size=8}Name $alignr PID   CPU%   MEM%${font sans-serif:normal:size=8}
 ${top name 1} $alignr ${top pid 1} ${top cpu 1}% ${top mem 1}%

@@ -3,10 +3,9 @@ qutebrowser
 htop
 xsel
 scrot
-pulseaudio
 alsa-utils
+libnotify
 locate
-moc
 ueberzug
 poppler
 ffmpeg
@@ -22,3 +21,14 @@ fuse
 ntfs-3g
 neofetch
 cmatrix
+dunst
+nnn
+conky
+xcompmgr
+herbstluftwm
+pamixer
+youtube-dl
+mpv
+gcc
+sxiv
+feh

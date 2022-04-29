@@ -13,7 +13,9 @@ return require("packer").startup({
 		use("nvim-lua/plenary.nvim")
 		use("nvim-telescope/telescope.nvim")
 
-		use("jose-elias-alvarez/null-ls.nvim")
+    use 'bluz71/vim-moonfly-colors'
+	
+    use("jose-elias-alvarez/null-ls.nvim")
 
 		use("neovim/nvim-lspconfig")
     use("williamboman/nvim-lsp-installer")

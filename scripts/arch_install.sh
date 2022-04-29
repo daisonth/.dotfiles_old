@@ -14,27 +14,31 @@ case $p in
     lsblk                            
     lsblk -f
 
-    echo -ne "\nSelect a drive to partition (eg: sdc) : "
+    echo -ne "\nSelect a drive to partition (eg: sdc) and create a efi and root partitions : "
     read x
-    cfdisk /dev/$x
+    cfdisk -z /dev/$x
     clear
 
     lsblk
     lsblk -f
     echo -ne "\nEnter the Partition to be formated as root(eg: sdc1) : "
     read y
+    echo -ne "\nEnter the Partition to be formated as efi(eg: sdc1) : "
+    read x
     mkfs.ext4 /dev/$y
-
+    mkfs.fat -F32 /dev/$x
+    clear
     mount /dev/$y /mnt
     mkdir /mnt/efi
-    mount /dev/sda2 /mnt/efi
+    mount /dev/$x /mnt/efi
 
     pacstrap /mnt base linux linux-firmware
 
     genfstab -U /mnt >> /mnt/etc/fstab
 
+    cp /arch_install.sh /mnt/
     arch-chroot /mnt
-    cp /media/arch_install.sh /mnt/
+    ;;
 
   2)
     ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
@@ -62,8 +66,10 @@ case $p in
     echo -ne "\nEnter root password : "
     passwd
 
+curl -sS https://starship.rs/install.sh | sh
     echo -ne "\nEdit visudo\n"
     visudo
+    ;;
 
   3)
     systemctl enable dhcpcd.service 
@@ -77,10 +83,17 @@ case $p in
 
     echo -ne "\nReboot now and check if connected to internet\n"
     ping archlinux.org
+    ;;
 
   4)
-    git clone https://github.org/daisonth/.dotfiles.git
+    git clone https://github.com/daisonth/.dotfiles.git
     cd .dotfiles
-    sudo rm -r /home/daison/.bashrc /home/daison/.bash_profiles
+    sudo rm -r /home/daison/.bashrc /home/daison/.bash_profile
     stow .
-    sudo pacman -S $(cat arch_pkg)
+    sudo pacman -S $(cat /arch_pkg)
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    curl -sS https://starship.rs/install.sh | sh
+    curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
+    ;;
+
+esac
