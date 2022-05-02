@@ -3,7 +3,7 @@
 xcompmgr &
 dunst &
 ~/.fehbg &
-conky &
+#conky &
 slstatus &
 #exec dwm
 exec spectrwm
