@@ -1,5 +1,5 @@
-Sxiv.background: #161320
+Sxiv.background: #000000
 
-Sxiv.foreground: #DDB6F2
+Sxiv.foreground: #c6c6c6
 
-Sxiv.font: Agave Nerd Font:size=9
+Sxiv.font: Blex Mono Nerd Font:Bold:size=9

@@ -12,3 +12,7 @@ settings:
         ',p': hint links spawn mpv {hint-url}
   colors.webpage.darkmode.enabled:
     global: true
+  content.blocking.enabled:
+    global: true
+  content.private_browsing:
+    global: false

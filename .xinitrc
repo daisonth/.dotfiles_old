@@ -6,5 +6,6 @@ dunst &
 #conky &
 slstatus &
 #exec dwm
+/usr/lib/kdeconnectd &
 exec spectrwm
 #exec herbstluftwm --locked
