@@ -105,7 +105,6 @@ nmap("f", ":NvimTreeToggle<CR>")
 nmap("<F1>", ":lua require('FTerm').toggle()<CR>")
 tmap("<F1>", "<C-\\><C-n>:lua require('FTerm').toggle()<CR>")
 
-
 require("cfg/packer")
 --require("cfg/catppuccin")
 --require("cfg/gruvbox_flat")

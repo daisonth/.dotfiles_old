@@ -9,10 +9,13 @@ settings:
   bindings.commands:
     global:
       normal:
-        ',p': hint links spawn mpv {hint-url}
+        <Alt+m>: hint links spawn mpv {hint-url}
+        <Alt+p>: config-cycle content.private_browsing;;message-info "Private Browing
+          Toggled";;open -t qute://configdiff
+        <Alt+r>: config-cycle colors.webpage.darkmode.enabled;;restart
   colors.webpage.darkmode.enabled:
     global: true
   content.blocking.enabled:
     global: true
   content.private_browsing:
-    global: false
+    global: true
