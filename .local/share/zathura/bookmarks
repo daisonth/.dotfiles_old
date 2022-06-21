@@ -1,4 +1,4 @@
-[/home/daison/books/cpp-primer.pdf]
+[/home/daison/code/c++/books/cpp-primer.pdf]
 
 namespace=33;0.5;0.023346601798471034;
 
@@ -19,7 +19,7 @@ read_unknown_number_of_input=41;0.45438996579247437;0.029180849978063146;
 
 1=52;0.5;0.036885897416236123;
 
-[/home/daison/books/NCURSES-Programming-HOWTO.pdf]
+[/home/daison/code/c++/books/NCURSES-Programming-HOWTO.pdf]
 1=16;0.5291464081443692;0.15541549147600747;
 Window=27;0.53005283998072505;0.26787119847082047;
 Function-Naming=17;0.52556173338644041;0.16333473878553209;

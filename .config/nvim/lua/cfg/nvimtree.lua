@@ -1,12 +1,8 @@
 vim.g.nvim_tree_side = "bottom"
-vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_highlight_opened_files = 0
-vim.g.nvim_tree_icon_padding = " "
 
 require("nvim-tree").setup({
 	auto_reload_on_write = true,
 	disable_netrw = true,
-	hide_root_folder = false,
 	hijack_cursor = true,
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,
@@ -23,11 +19,10 @@ require("nvim-tree").setup({
 		number = false,
 		relativenumber = false,
 		signcolumn = "yes",
-		auto_resize = true,
 		mappings = {
 			custom_only = false,
 			list = {
-				-- user mappings go here
+				{ key = "f", action = "" },
 			},
 		},
 	},
@@ -97,5 +92,14 @@ require("nvim-tree").setup({
 			git = false,
 			profile = false,
 		},
+	},
+	renderer = {
+		indent_markers = {
+			enable = true,
+		},
+		icons = {
+			padding = " ",
+		},
+		highlight_opened_files = "all",
 	},
 })

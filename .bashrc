@@ -12,7 +12,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 
-alias snd='bash .dotfiles/scripts/kdecon.sh && kdeconnect-cli -n RMX2001 --share $(fzf -m)'
+alias snd='kdeconnect-cli -n RMX2001 --share $(fzf -m)'
 alias con='kdeconnect-cli -l'
 alias sda1='sudo mount /dev/sda1 /media/'
 alias vim='nvim'
