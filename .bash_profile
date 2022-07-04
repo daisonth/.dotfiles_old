@@ -5,7 +5,7 @@
 
 
 export TERMINAL="alacritty"
-export BROWSER="qutebrowser"
+#export BROWSER="firefox"
 export READER="zathura"
 export EDITOR="nvim"
 export VISUAL="nvim"

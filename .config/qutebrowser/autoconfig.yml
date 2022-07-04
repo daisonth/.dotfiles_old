@@ -14,7 +14,7 @@ settings:
           Toggled";;open -t qute://configdiff
         <Alt+r>: config-cycle colors.webpage.darkmode.enabled;;restart
   colors.webpage.darkmode.enabled:
-    global: false
+    global: true
   content.blocking.enabled:
     global: true
   content.private_browsing:
