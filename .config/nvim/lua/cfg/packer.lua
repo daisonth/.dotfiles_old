@@ -8,17 +8,19 @@ return require("packer").startup({
 		use("lukas-reineke/indent-blankline.nvim")
 		use("numToStr/FTerm.nvim")
 		use("norcalli/nvim-colorizer.lua")
-		use({ "catppuccin/nvim", as = "catppuccin" })
-    use("eddyekofo94/gruvbox-flat.nvim")
 		use("nvim-lua/plenary.nvim")
 		use("nvim-telescope/telescope.nvim")
 
-    use 'bluz71/vim-moonfly-colors'
-	
-    use("jose-elias-alvarez/null-ls.nvim")
+		use({ "catppuccin/nvim", as = "catppuccin" })
+		use("eddyekofo94/gruvbox-flat.nvim")
+		use("bluz71/vim-moonfly-colors")
+		use("luisiacc/gruvbox-baby")
+		use("folke/tokyonight.nvim")
+
+		use("jose-elias-alvarez/null-ls.nvim")
 
 		use("neovim/nvim-lspconfig")
-    use("williamboman/nvim-lsp-installer")
+		use("williamboman/nvim-lsp-installer")
 
 		use("hrsh7th/nvim-cmp")
 		use("hrsh7th/cmp-nvim-lsp")
@@ -48,5 +50,5 @@ return require("packer").startup({
 		},
 		auto_clean = true,
 		compile_on_sync = true,
-  }
+	},
 })

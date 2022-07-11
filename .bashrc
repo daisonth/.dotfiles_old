@@ -42,3 +42,5 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 # kdeconnect-cli -n RMX2001 --share $(cat .config/cfiles/clipboard)
+
+eval "$(thefuck --alias)"

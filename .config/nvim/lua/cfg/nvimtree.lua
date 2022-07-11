@@ -51,7 +51,7 @@ require("nvim-tree").setup({
 		},
 	},
 	filters = {
-		dotfiles = false,
+		dotfiles = true,
 		custom = {},
 		exclude = {},
 	},

@@ -40,7 +40,7 @@ set highlight-color             "#D68EB2"
 set highlight-active-color      "#ff79c6" 
 
 #set default-bg                  "#1e1d2d" 
-set default-bg rgba(0,0,0,0.9) #00
+set default-bg rgba(0,0,0,0.8) #00
 set default-fg                  "#FFEE79" 
 
 set render-loading              true
@@ -51,7 +51,7 @@ set render-loading-bg           "#18191E"
 
 #set recolor-lightcolor          "#1e1d2d" 
 set recolor-lightcolor rgba(0,0,0,0) #00
-set recolor-darkcolor           "#b2b2b2" 
+set recolor-darkcolor           "#ffffff" 
 
 map <A-b> feedkeys ":bmark "
 map <A-l> feedkeys ":blist<Tab>"
