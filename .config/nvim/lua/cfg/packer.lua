@@ -17,6 +17,8 @@ return require("packer").startup({
 		use("luisiacc/gruvbox-baby")
 		use("folke/tokyonight.nvim")
 
+		use({ "ellisonleao/glow.nvim", branch = "main" })
+
 		use("jose-elias-alvarez/null-ls.nvim")
 
 		use("neovim/nvim-lspconfig")

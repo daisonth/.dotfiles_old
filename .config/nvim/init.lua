@@ -1,6 +1,7 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 vim.opt.wrap = false
+vim.opt.spell = true
 vim.opt.ruler = true
 vim.opt.cindent = true
 vim.opt.smarttab = true
@@ -25,7 +26,6 @@ vim.g.mapleader = ","
 vim.opt.iskeyword:append("-")
 vim.opt.clipboard = "unnamedplus"
 vim.opt.formatoptions = vim.opt.formatoptions - "cro"
-vim.g.moonflyTransparent = 1
 
 function map(mode, shortcut, command)
 	vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })

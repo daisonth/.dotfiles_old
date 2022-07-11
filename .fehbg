@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/daison/wallpaper/solid/col3.png'
+feh --no-fehbg --bg-tile '/home/daison/wallpaper/grid.png'
