@@ -1,16 +1,8 @@
-# Lighthaus Color theme for Zathura
-# GIT: https://github.com/lighthaus-theme/zathura
-# Author: Adhiraj Sirohi (https://github.com/brutuski)
-#         Vasundhara Sharma (https://github.com/vasundhasauras)
-
-# Copyright © 2020-Present Lighthaus Theme
-# Copyright © 2020-Present Adhiraj Sirohi
-# Copyright © 2020-Present Vasundhara Sharma
 
 set selection-clipboard clipboard
 set recolor true
 
-# Lighthaus Colors:
+#Colors:
 
 set notification-error-bg       "#FC2929" 
 set notification-error-fg       "#18191E" 

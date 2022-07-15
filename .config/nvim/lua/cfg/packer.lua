@@ -11,12 +11,46 @@ return require("packer").startup({
 		use("nvim-lua/plenary.nvim")
 		use("nvim-telescope/telescope.nvim")
 
-		use({ "catppuccin/nvim", as = "catppuccin" })
-		use("eddyekofo94/gruvbox-flat.nvim")
-		use("bluz71/vim-moonfly-colors")
+		--	use({ "catppuccin/nvim", as = "catppuccin" })
+		--	use("eddyekofo94/gruvbox-flat.nvim")
+		--	use("bluz71/vim-moonfly-colors")
 		use("luisiacc/gruvbox-baby")
-		use("folke/tokyonight.nvim")
+		--	use("folke/tokyonight.nvim")
+		use({
+			"lewis6991/spellsitter.nvim",
+			config = function()
+				require("spellsitter").setup()
+			end,
+		})
 
+		use({
+			"goolord/alpha-nvim",
+			config = function()
+				local alpha = require("alpha")
+				local dashboard = require("alpha.themes.dashboard")
+				dashboard.section.header.val = {
+					[[                               __                ]],
+					[[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
+					[[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
+					[[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
+					[[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
+					[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+				}
+				dashboard.section.buttons.val = {
+					dashboard.button("N", "  New file", "<cmd>ene <CR>"),
+					dashboard.button("F", "  Find file", "<cmd>Telescope find_files<CR>"),
+					dashboard.button("R", "  Recently opened files", "<cmd>Telescope oldfiles<CR>"),
+					dashboard.button("V", "📓 Vimwiki", "<cmd>VimwikiIndex<CR>"),
+					dashboard.button("P", "📦 Packersync", "<cmd>PackerSync<CR>"),
+					dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
+				}
+				dashboard.config.opts.noautocmd = true
+
+				vim.cmd([[autocmd User AlphaReady echo 'ready']])
+
+				alpha.setup(dashboard.config)
+			end,
+		})
 		use({ "ellisonleao/glow.nvim", branch = "main" })
 
 		use("jose-elias-alvarez/null-ls.nvim")

@@ -84,7 +84,7 @@ nmap(";", ":")
 nmap("TT", ":vs<CR>:set nornu<CR>:set nonu<CR>:te<CR>i")
 nmap("bx", ":bd<CR>")
 
--- auto close paranthesis
+-- auto close parenthesis
 imap("{", "{}<Left>")
 imap("{<Space>", "<Esc>o{}<Left><CR><Up><Esc>o")
 
