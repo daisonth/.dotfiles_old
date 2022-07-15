@@ -6,6 +6,7 @@
 alias s='startx'
 alias fcd='cd $(ls -a | fzf)'
 alias vv='nvim $(fzf)'
+alias cp="rsync -avz"
 
 alias gs='git status'
 alias ga='git add'
