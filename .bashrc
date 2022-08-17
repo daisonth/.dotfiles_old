@@ -13,6 +13,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 
+alias tt='tt -theme pro'
 alias snd='kdeconnect-cli -n RMX2001 --share $(fzf -m)'
 alias con='kdeconnect-cli -l'
 alias sda1='sudo mount /dev/sda1 /media/'
@@ -27,6 +28,8 @@ alias add='sudo pacman -S'
 alias remove='sudo pacman --remove --recursive'
 alias update='sudo pacman -Syyu'
 alias hc='herbstclient'
+alias mp3='youtube-dl -x --audio-format mp3 '
+alias mp4='youtube-dl --restrict-filenames '
 
 eval "$(thefuck --alias)"
 

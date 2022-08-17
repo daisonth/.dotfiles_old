@@ -1,8 +1,17 @@
 # Inserts a blank line between shell prompts
-add_newline = true
+# add_newline = true
+#
+## ▶ ❯ ➜
+#[character]                            # The name of the module we are configuring is "character"
+#success_symbol = "[▶](bold grey)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+#error_symbol = "[▶](bold red)"
+# Use custom format
+format = """
+[┌](bold red)$directory$rust$package
+[└─>](bold yellow) """
 
-# ▶ ❯ ➜
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[▶](bold grey)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[▶](bold red)"
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
 
+# Disable the blank line at the start of the prompt
+add_newline = false

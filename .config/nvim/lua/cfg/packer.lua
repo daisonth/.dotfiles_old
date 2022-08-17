@@ -24,6 +24,14 @@ return require("packer").startup({
 		})
 
 		use({
+			"xeluxee/competitest.nvim",
+			requires = "MunifTanjim/nui.nvim",
+			config = function()
+				require("competitest").setup()
+			end,
+		})
+
+		use({
 			"goolord/alpha-nvim",
 			config = function()
 				local alpha = require("alpha")

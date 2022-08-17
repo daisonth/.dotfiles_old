@@ -1,7 +1,8 @@
 alacritty
+feh
+libnotify
 alsa-utils
 amd-ucode
-asciiquarium
 autoconf
 automake
 base
@@ -21,7 +22,6 @@ htop
 kdeconnect
 neofetch
 neovim
-nnn-nerd
 p7zip
 pamixer
 pkgconf
@@ -46,5 +46,4 @@ wget
 xcompmgr
 xf86-video-nouveau
 xf86-video-vesa
-yay
 zsh-syntax-highlighting
