@@ -48,8 +48,8 @@ nmap("<", "<gv")
 nmap(">", ">gv")
 
 -- easy escape
-imap("jk", "<Esc>")
-imap("kj", "<Esc>")
+imap("jk", "<Esc>:w<CR>")
+imap("kj", "<Esc>:w<CR>")
 
 -- save & quit
 nmap("<C-s>", ":w<CR>")
@@ -85,15 +85,15 @@ nmap("TT", ":vs<CR>:set nornu<CR>:set nonu<CR>:te<CR>i")
 nmap("bx", ":bd<CR>")
 
 -- auto close parenthesis
-imap("{", "{}<Left>")
-imap("{<Space>", "<Esc>o{}<Left><CR><Up><Esc>o")
-
-imap("(", "()<Left>")
-imap("<", "<><Left>")
-imap("<<", "<<")
-imap("'", "''<Left>")
-imap('"', '""<Left>')
-imap("[", "[]<Left>")
+--imap("{", "{}<Left>")
+--imap("{<Space>", "<Esc>o{}<Left><CR><Up><Esc>o")
+--
+--imap("(", "()<Left>")
+--imap("<", "<><Left>")
+--imap("<<", "<<")
+--imap("'", "''<Left>")
+--imap('"', '""<Left>')
+--imap("[", "[]<Left>")
 
 -- New line in normal mode
 nmap("<C-o>", "O<Esc>")
@@ -104,12 +104,16 @@ nmap("<Leader>p", ":BufferLinePick<CR>")
 
 nmap("f", ":NvimTreeToggle<CR>")
 nmap("<F1>", ":lua require('FTerm').toggle()<CR>")
+imap("<F1>", "<Esc>:lua require('FTerm').toggle()<CR>")
 tmap("<F1>", "<C-\\><C-n>:lua require('FTerm').toggle()<CR>")
 
+nmap("<F5>", ":CompetiTestRun<CR>")
+imap("<F5>", "<Esc>:w<CR>:CompetiTestRun<CR>")
+
 require("cfg/packer")
+require("cfg/grvbox_bab")
 --require("cfg/catppuccin")
 --require("cfg/gruvbox_flat")
-require("cfg/grvbox_bab")
 --require("cfg/tokyoNight")
 --require("cfg/moonfly")
 require("cfg/bufferline")
@@ -123,3 +127,4 @@ require("cfg/colorizer")
 require("cfg/vimwiki")
 require("cfg/null_ls")
 require("cfg/indentBlankLines")
+--require("cfg/coderunner")

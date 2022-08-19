@@ -80,6 +80,20 @@ return require("packer").startup({
 		use("L3MON4D3/LuaSnip")
 
 		use("vimwiki/vimwiki")
+
+		use({
+			"windwp/nvim-autopairs",
+			config = function()
+				require("nvim-autopairs").setup({})
+			end,
+		})
+		use({
+			"numToStr/Comment.nvim",
+			config = function()
+				require("Comment").setup()
+			end,
+		})
+		use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 	end,
 
 	config = {

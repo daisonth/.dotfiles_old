@@ -4,7 +4,7 @@
 vim.g.gruvbox_baby_background_color = "dark"
 
 -- Each highlight group must follow the structure:
--- ColorGroup = {fg = "foreground color", bg = "background_color", style = "some_style(:h attr-list)"}
+ColorGroup = { fg = "foreground color", bg = "background_color", style = "some_style(:h attr-list)" }
 -- See also :h highlight-guifg
 -- Example:
 vim.g.gruvbox_baby_highlights = { Visual = { fg = "NONE", bg = "#4A433C", style = "NONE" } }
