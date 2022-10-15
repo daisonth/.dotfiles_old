@@ -1,7 +1,7 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 vim.opt.wrap = false
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.ruler = true
 vim.opt.cindent = true
 vim.opt.smarttab = true
@@ -14,11 +14,11 @@ vim.opt.cursorline = true
 vim.opt.smartindent = false
 vim.opt.termguicolors = true
 vim.opt.mouse = "a"
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 vim.opt.cmdheight = 2
 vim.opt.pumheight = 10
 vim.opt.laststatus = 0
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 400
 vim.opt.cino = "p0"
@@ -112,6 +112,7 @@ imap("<F5>", "<Esc>:w<CR>:CompetiTestRun<CR>")
 
 require("cfg/packer")
 require("cfg/grvbox_bab")
+-- require("cfg/minimal")
 --require("cfg/catppuccin")
 --require("cfg/gruvbox_flat")
 --require("cfg/tokyoNight")

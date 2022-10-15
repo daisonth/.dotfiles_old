@@ -1,2 +1,3 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/daison/wallpaper/fav/neon-lines.jpg'
+# feh --no-fehbg --bg-tile '/home/daison/wallpaper/fav/grid.png'
+feh --no-fehbg --bg-scale '/home/daison/wallpaper/new/moonRedStars.jpg'

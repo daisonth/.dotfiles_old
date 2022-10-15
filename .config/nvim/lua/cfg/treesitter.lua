@@ -19,7 +19,21 @@ require("nvim-treesitter.configs").setup({
 		},
 	},
 
-	ensure_installed = { "c", "cpp", "javascript", "python", "lua", "css", "scss", "html", "php", "bash" },
+	ensure_installed = {
+		"c",
+		"cpp",
+		"javascript",
+		"python",
+		"lua",
+		"css",
+		"scss",
+		"html",
+		"php",
+		"bash",
+		"json",
+		"java",
+		"solidity",
+	},
 	-- ensure_installed = {"javascript", "python", "lua", "css", "scss", "html", "php", "bash"},
 
 	indent = {
@@ -27,5 +41,5 @@ require("nvim-treesitter.configs").setup({
 	},
 })
 
---vim.o.foldmethod = "expr"
---vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.o.foldmethod = "expr"
+-- vim.o.foldexpr = "nvim_treesitter#foldexpr()"

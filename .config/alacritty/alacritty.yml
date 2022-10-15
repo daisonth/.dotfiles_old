@@ -6,48 +6,72 @@ colors:
   primary:
     # hard contrast: background = '#1d2021'
     # background: '#282828'
-    background: '#000000'
+    background: "#000000"
     # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
+    foreground: "#ebdbb2"
 
   cursor:
-  #    text: '#d8d8d8'
-     cursor: '#d5001e'
+    #    text: '#d8d8d8'
+    cursor: "#d5001e"
 
   # Normal colors
   normal:
-    black:   '#282828'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
+    black: "#000000"
+    red: "#cc241d"
+    green: "#98971a"
+    yellow: "#d79921"
+    blue: "#458588"
+    magenta: "#b16286"
+    cyan: "#689d6a"
+    white: "#a89984"
 
   # Bright colors
   bright:
-    black:   '#928374'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#ebdbb2'
+    black: "#928374"
+    red: "#fb4934"
+    green: "#b8bb26"
+    yellow: "#fabd2f"
+    blue: "#83a598"
+    magenta: "#d3869b"
+    cyan: "#8ec07c"
+    white: "#ebdbb2"
 
+
+# colors:
+#   primary:
+#     background: '#000000'
+#     foreground: '#dfe0ea'
+#   normal:
+#     black:   '#272932'
+#     red:     '#e85a84'
+#     green:   '#94dd8e'
+#     yellow:  '#e9d26c'
+#     blue:    '#7eb7e6'
+#     magenta: '#d895c7'
+#     cyan:    '#89beb7'
+#     white:   '#cfd0d7'
+#   bright:
+#     black:   '#16181d'
+#     red:     '#e85a84'
+#     green:   '#94dd8e'
+#     yellow:  '#e9d26c'
+#     blue:    '#7eb7e6'
+#     magenta: '#d895c7'
+#     cyan:    '#89beb7'
+#     white:   '#dfe0ea'
+#
       #colors:
-  #  # Default colors
+  #  # default colors
   #  primary:
   #    background: '#000000'
   #    foreground: '#d8d8d8'
   #
-  #  # Colors the cursor will use if `custom_cursor_colors` is true
+  #  # colors the cursor will use if `custom_cursor_colors` is true
   #  cursor:
   #    text: '#d8d8d8'
   #    cursor: '#d5001e'
   #
-  #  # Normal colors
+  #  # normal colors
   #  normal:
   #    black:   '#181818'
   #    red:     '#ab4642'
@@ -58,7 +82,7 @@ colors:
   #    cyan:    '#86c1b9'
   #    white:   '#d8d8d8'
   #
-  #  # Bright colors
+  #  # bright colors
   #  bright:
   #    black:   '#585858'
   #    red:     '#ab4642'
@@ -69,8 +93,7 @@ colors:
   #    cyan:    '#86c1b9'
   #    white:   '#f8f8f8'
 
-
-## Colors
+## colors
 #colors:
 #  primary:
 #    background:        '#000000'
@@ -105,21 +128,24 @@ colors:
 #    cyan:    '#85dc85'
 #    white:   '#e4e4e4'
 
-# Font configuration
+# font configuration
 font:
   normal:
-    family: "Blex Mono Nerd Font"
-    style: Regular
+    family: "blex mono nerd font"
+    style: regular
   bold:
-    family: "Blex Mono Nerd Font"
-    style: Bold
+    family: "blex mono nerd font"
+    style: regular
+    style: bold
   italic:
-    family: "Blex Mono Nerd Font"
-    style: Italic
+    family: "blex mono nerd font"
+    style: regular
+    style: italic
   bold_italic:
-    family: "Blex Mono Nerd Font"
-    style: Bold Italic
+    family: "blex mono nerd font"
+    style: regular
+    style: bold italic
   size: 12.0
 
 window:
-  opacity: 0.9
+  opacity: 1.0

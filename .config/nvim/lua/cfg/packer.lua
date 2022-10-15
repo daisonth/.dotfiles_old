@@ -15,6 +15,7 @@ return require("packer").startup({
 		--	use("eddyekofo94/gruvbox-flat.nvim")
 		--	use("bluz71/vim-moonfly-colors")
 		use("luisiacc/gruvbox-baby")
+		use("Yazeed1s/minimal.nvim")
 		--	use("folke/tokyonight.nvim")
 		use({
 			"lewis6991/spellsitter.nvim",
@@ -95,7 +96,6 @@ return require("packer").startup({
 		})
 		use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 	end,
-
 	config = {
 		display = {
 			open_fn = function()

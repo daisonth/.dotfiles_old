@@ -32,7 +32,7 @@ set highlight-color             "#D68EB2"
 set highlight-active-color      "#ff79c6" 
 
 #set default-bg                  "#1e1d2d" 
-set default-bg rgba(0,0,0,0.8) #00
+set default-bg rgba(0,0,0,1.0) #00
 set default-fg                  "#FFEE79" 
 
 set render-loading              true

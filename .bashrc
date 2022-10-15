@@ -42,7 +42,7 @@ export NNN_PLUG='v:imgview;p:preview-tui;k:kdeconnect;f:fixname;g:fzcd'
 if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
     source /usr/share/nnn/quitcd/quitcd.bash_zsh
 fi
-alias n='n -de'
+alias n='n -e'
 
 PS1='[\u@\h \W]\$ '
 

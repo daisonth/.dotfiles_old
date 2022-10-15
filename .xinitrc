@@ -4,7 +4,7 @@
 xcompmgr &
 dunst &
 ~/.fehbg &
-#conky &
+# conky &
 slstatus &
 #exec dwm
 /usr/lib/kdeconnectd &
