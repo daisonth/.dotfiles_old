@@ -77,7 +77,7 @@ return require("packer").startup({
 
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
-		use("rafamadriz/friendly-snippets")
+		-- use("rafamadriz/friendly-snippets")
 		use("L3MON4D3/LuaSnip")
 
 		use("vimwiki/vimwiki")

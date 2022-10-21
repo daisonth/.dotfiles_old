@@ -45,11 +45,13 @@ ueberzug
 unoconv
 wget
 xcompmgr
-yay
 zsh-syntax-highlighting
 youtube-dl
-mocp
 discord
 reflector
 zathura
 zathura-pdf-mupdf
+feh
+scrot
+zsh
+zsh-completions

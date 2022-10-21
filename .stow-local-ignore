@@ -7,3 +7,6 @@ scripts
 dwm
 dmenu
 classic_console_neue.zip
+.bashrc
+.conkyrc
+.bash_profile

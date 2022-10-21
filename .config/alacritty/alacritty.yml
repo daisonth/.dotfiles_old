@@ -149,3 +149,6 @@ font:
 
 window:
   opacity: 1.0
+  padding:
+    x: 2
+    y: 2

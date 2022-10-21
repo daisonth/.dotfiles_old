@@ -5,7 +5,7 @@ xcompmgr &
 dunst &
 ~/.fehbg &
 # conky &
-slstatus &
+# slstatus &
 #exec dwm
 /usr/lib/kdeconnectd &
 exec spectrwm
