@@ -15,7 +15,6 @@ return require("packer").startup({
 		--	use("eddyekofo94/gruvbox-flat.nvim")
 		--	use("bluz71/vim-moonfly-colors")
 		use("luisiacc/gruvbox-baby")
-		use("Yazeed1s/minimal.nvim")
 		--	use("folke/tokyonight.nvim")
 		use({
 			"lewis6991/spellsitter.nvim",
@@ -77,7 +76,7 @@ return require("packer").startup({
 
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
-		-- use("rafamadriz/friendly-snippets")
+		use("rafamadriz/friendly-snippets")
 		use("L3MON4D3/LuaSnip")
 
 		use("vimwiki/vimwiki")
@@ -94,8 +93,9 @@ return require("packer").startup({
 				require("Comment").setup()
 			end,
 		})
-		use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
+		-- use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 	end,
+
 	config = {
 		display = {
 			open_fn = function()

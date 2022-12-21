@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash 
 
 pamixer -t ;
 if [[ $(pamixer --get-volume-human) == "muted" ]]; then

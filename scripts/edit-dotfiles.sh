@@ -1,6 +1,6 @@
 #!/bin/bash
 
-str=$'alacritty\nspectrwm\nHerbstluftwm\nnvim\ndmenu\nst\nranger\nzathurarc\n.stow-local-ignore\n.dunstrc\n.xinitrc\n.bashrc\n.fehbg\n.conkyrc\nscripts\nqutebrowser'
+str=$'alacritty\nspectrwm\nHerbstluftwm\nnvim\ndmenu\nst\nranger\nzshrc\nzathurarc\n.stow-local-ignore\n.dunstrc\n.xinitrc\n.bashrc\n.fehbg\n.conkyrc\nscripts\nqutebrowser'
 read p <<< $(echo "$str"|dmenu)
 
 if [ $p == "alacritty" ];then
@@ -30,6 +30,10 @@ elif [ $p == "st" ];then
 elif [ $p == "ranger" ];then
   cd /home/daison/.dotfiles/.config/ranger/
   alacritty -e nvim rc.conf 
+
+elif [ $p == "zshrc" ];then
+  cd /home/daison/.dotfiles/
+  alacritty -e nvim .zshrc
 
 elif [ $p == "zathurarc" ];then
   cd /home/daison/.dotfiles/.config/zathura/

@@ -1,18 +1,16 @@
 #!/bin/bash
 
-if [[ $(xsel) =~ "youtube" ]]; then
+if [[ $(xsel) =~ "youtu" ]]; then
   str=$'Video\nAudio'
   read p <<< $(echo "$str"|dmenu) 
+  x=$(xsel)
 
   if [ $p == "Video" ];then
-      cd $HOME/videos
-      alacritty -e youtube-dl --restrict-filenames $(xsel)
+      youtube-dl --restrict-filenames $(xsel -op)
       notify-send "Youtube video downloaded" -t 5000
   elif [ $p == "Audio" ]; then
-      cd $HOME/audio
-      alacritty -e youtube-dl -x --audio-format mp3 $(xsel)
+      youtube-dl -x --audio-format mp3 $(xsel -op)
       notify-send "Youtube audio downloaded" -t 5000
-
   else
       exit
   fi

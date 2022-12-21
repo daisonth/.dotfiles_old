@@ -14,15 +14,15 @@ vim.opt.cursorline = true
 vim.opt.smartindent = false
 vim.opt.termguicolors = true
 vim.opt.mouse = "a"
-vim.opt.tabstop = 4
-vim.opt.cmdheight = 2
+vim.opt.tabstop = 2
+vim.opt.cmdheight = 1
 vim.opt.pumheight = 10
 vim.opt.laststatus = 0
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 400
 vim.opt.cino = "p0"
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 vim.opt.iskeyword:append("-")
 vim.opt.clipboard = "unnamedplus"
 vim.opt.formatoptions = vim.opt.formatoptions - "cro"
@@ -55,6 +55,7 @@ imap("kj", "<Esc>:w<CR>")
 nmap("<C-s>", ":w<CR>")
 nmap("<C-S>", ":w!<CR>")
 nmap("<C-q>", ":q!<CR>")
+nmap("<Leader>s", ":w<CR>")
 
 -- Better window navigation
 nmap("<C-h>", "<C-w>h")
@@ -63,7 +64,7 @@ nmap("<C-k>", "<C-w>k")
 nmap("<C-l>", "<C-w>l")
 
 -- switch buffer
-nmap("<TAB>", ":bn<CR>")
+nmap("<TAB>", ":BufferLineCycleNext<CR>")
 nmap("<S-TAB>", ":bp<CR>")
 
 -- capitalize word
@@ -97,12 +98,12 @@ nmap("bx", ":bd<CR>")
 
 -- New line in normal mode
 nmap("<C-o>", "O<Esc>")
-nmap("<Space>j", "i<CR><ESC>")
+nmap("<Leader>j", "i<CR><ESC>")
 
 -- pic active buffer
 nmap("<Leader>p", ":BufferLinePick<CR>")
 
-nmap("f", ":NvimTreeToggle<CR>")
+nmap("<Leader>e", ":NvimTreeToggle<CR>")
 nmap("<F1>", ":lua require('FTerm').toggle()<CR>")
 imap("<F1>", "<Esc>:lua require('FTerm').toggle()<CR>")
 tmap("<F1>", "<C-\\><C-n>:lua require('FTerm').toggle()<CR>")
@@ -112,11 +113,6 @@ imap("<F5>", "<Esc>:w<CR>:CompetiTestRun<CR>")
 
 require("cfg/packer")
 require("cfg/grvbox_bab")
--- require("cfg/minimal")
---require("cfg/catppuccin")
---require("cfg/gruvbox_flat")
---require("cfg/tokyoNight")
---require("cfg/moonfly")
 require("cfg/bufferline")
 require("cfg/nvimtree")
 --require("cfg/lspconfig")
@@ -128,4 +124,3 @@ require("cfg/colorizer")
 require("cfg/vimwiki")
 require("cfg/null_ls")
 require("cfg/indentBlankLines")
---require("cfg/coderunner")

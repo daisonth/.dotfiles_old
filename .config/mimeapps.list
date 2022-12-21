@@ -8,7 +8,7 @@ image/jpeg=sxiv.desktop
 text/cpp=nvim.desktop
 audio/mp3=mocp.desktop
 audio/mpeg=mocp.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-JO6FP1.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-MDOFU1.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-JO6FP1.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-JO6FP1.desktop;userapp-Telegram Desktop-MDOFU1.desktop;
